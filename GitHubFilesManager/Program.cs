@@ -1,21 +1,20 @@
 using System.Text;
+using Microsoft.AspNetCore.Identity;
 using Octokit;
 
+Console.WriteLine("Input your token: ");
+string? inputToken = Console.ReadLine();
+
 var gitHubClient = new GitHubClient(new ProductHeaderValue("MyCoolFilesManager"));
-gitHubClient.Credentials = new Credentials("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");
+    gitHubClient.Credentials = new Credentials(inputToken);
 
-var user = await gitHubClient.User.Get("danperunov");
+var login = gitHubClient.User.Current();
+Console.WriteLine(login);
 
-var sb = new StringBuilder("---");
-sb.AppendLine();
-sb.AppendLine($"date: \"2021-05-01\"");
-sb.AppendLine($"title: \"My new fancy post\"");
-sb.AppendLine("tags: [csharp, azure, dotnet]");
-sb.AppendLine("---");
-sb.AppendLine();
+string filePath = @"/Users/danperunov/Downloads/2022-06-28 23.29.51.jpg";
+//var result = await gitHubClient.Repository.Content.CreateFile()
 
-sb.AppendLine("# The heading for my first post");
-sb.AppendLine();
+
 
 
 
