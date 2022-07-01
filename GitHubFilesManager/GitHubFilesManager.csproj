@@ -5,10 +5,15 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>62d8e9bb-48d5-4cc8-af9d-de16986e0cea</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Octokit" Version="0.51.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Abstractions\Abstractions.csproj" />
     </ItemGroup>
 
 </Project>
