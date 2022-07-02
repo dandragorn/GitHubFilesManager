@@ -1,11 +1,9 @@
 ﻿using GitActions;
 using Microsoft.Extensions.Configuration;
 
-
 var configuration = new ConfigurationBuilder()
     .AddUserSecrets<Program>()
     .Build();
-
 
 // github variables
 var login = "dandragorn";
@@ -28,6 +26,5 @@ catch (NotFoundException)
     //if file is not found - create it
 
 }*/
-
 
 Console.ReadKey();
