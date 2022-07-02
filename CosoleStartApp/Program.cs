@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 
 var configuration = new ConfigurationBuilder()
     .AddUserSecrets<Program>()
-    .AddEnvironmentVariables()
     .Build();
 
 
@@ -12,12 +11,12 @@ var configuration = new ConfigurationBuilder()
 var login = "dandragorn";
 var repo = "TestRepo";
 var branch = "main";
-string targetFile = "test_pic.jpg";
+var targetFile = "test_pic.jpg";
 var userToken = configuration["GitUser:userToken"];
 
-string filePath = @"/Users/danperunov/Downloads/test_pic.jpg";
+var filePath = @"/Users/danperunov/Downloads/test_pic.jpg";
 
-GitUploadFiles uploadTask = new GitUploadFiles();
+var uploadTask = new GitUploadFiles();
 await uploadTask.UploadFile(login, repo, branch, targetFile, userToken, filePath);
 
 /*try

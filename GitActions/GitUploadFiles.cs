@@ -11,10 +11,9 @@ public class GitUploadFiles : IGitUploadFiles
         var gitHubClient = new GitHubClient(new ProductHeaderValue("TestRepo"));
         gitHubClient.Credentials = new Credentials(userToken);
 
-        string fileString = Base64String.GetBase64String(filePath);
+        var fileString = Base64String.GetBase64String(filePath);
 
         await gitHubClient.Repository.Content.CreateFile(login, repo, targetFile,
             new CreateFileRequest("File creation", fileString, branch, true));
-        
     }
 }

@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Octokit" Version="0.51.0" />
+        <PackageReference Include="Octokit" Version="0.51.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Abstractions\Abstractions.csproj" />
+        <ProjectReference Include="..\Abstractions\Abstractions.csproj"/>
     </ItemGroup>
 
 </Project>
