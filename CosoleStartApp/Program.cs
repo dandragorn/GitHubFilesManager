@@ -14,8 +14,11 @@ var userToken = configuration["GitUser:userToken"];
 
 var filePath = @"/Users/danperunov/Downloads/test_pic.jpg";
 
+ConvertToBase64String filePathToString = new();
+string content = filePathToString.GetBase64String(filePath);
+
 var uploadTask = new GitUploadFiles();
-await uploadTask.UploadFile(login, repo, branch, targetFile, userToken, filePath);
+await uploadTask.UploadFile(login, repo, branch, targetFile, userToken, content);
 
 /*try
 {

@@ -1,4 +1,4 @@
-namespace GitActions;
+namespace Abstractions;
 
 public interface IConvertToBase64String
 {

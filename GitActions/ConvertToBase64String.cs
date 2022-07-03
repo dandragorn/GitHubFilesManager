@@ -1,3 +1,5 @@
+using Abstractions;
+
 namespace GitActions;
 
 public class ConvertToBase64String : IConvertToBase64String
