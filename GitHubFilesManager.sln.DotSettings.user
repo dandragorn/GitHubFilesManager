@@ -3,4 +3,5 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::CC648C16-D04D-4FF4-BE15-4F06AE7B1E63::net6.0::UnitTests.Tests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=dandragorn/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

@@ -1,8 +1,8 @@
 namespace GitActions;
 
-public static class Base64String
+public class ConvertToBase64String : IConvertToBase64String
 {
-    public static string GetBase64String(string filePath)
+    public string GetBase64String(string filePath)
     {
         var fileBytes = File.ReadAllBytes(filePath);
         return Convert.ToBase64String(fileBytes);
