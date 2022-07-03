@@ -19,6 +19,6 @@ public class Tests
     public void GetUserTokenTest()
     {
         var userToken = configuration["GitUser:userToken"];
-        Assert.AreEqual("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", userToken);
+        Assert.IsNotNull(userToken);
     }
 }
